@@ -1,4 +1,4 @@
-Coding-Standards
+Coding Standards
 ================
 
 Coding style guidelines
