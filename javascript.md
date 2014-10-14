@@ -121,7 +121,7 @@ function iDoSomething() {
 }
 ```
 
-* Objects should be in upper camelcase
+* Pseudo Classes should be in upper camelcase
 
 ```javascript
 //bad
