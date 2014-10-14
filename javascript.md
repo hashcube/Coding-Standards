@@ -92,6 +92,7 @@ animate()
   .now()
   .then();
 ```
+
 ## Naming Conventions
 * Variables in smaller case with words separated by _
 
@@ -104,7 +105,24 @@ var Variable_Not_Like_This;
 var variables_like_this;
 ```
 
-* Objects should be in camecase
+* functions should be in lower camelcase
+
+```javascript
+//bad
+function IDoSomething() {
+}
+
+function i_do_something() {
+}
+
+
+//good
+function iDoSomething() {
+}
+```
+
+* Objects should be in upper camelcase
+
 ```javascript
 //bad
 var a = new this_is_an_object();
