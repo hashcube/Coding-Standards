@@ -78,3 +78,38 @@ var foo = 1,
   return obj;
 }());
 ```
+
+## Chaining
+* Chain function calls on new lines
+
+```javascript
+//bad
+animate().now()
+  .then();
+
+//good
+animate()
+  .now()
+  .then();
+```
+## Naming Conventions
+* Variables in smaller case with words separated by _
+
+```javascript
+//bad
+var variableNotLikeThis;
+var Variable_Not_Like_This;
+
+//good
+var variables_like_this;
+```
+
+* Objects should be in camecase
+```javascript
+//bad
+var a = new this_is_an_object();
+var b = new This_Is_An_Object();
+
+//good
+var a = new ThisIsAnObject();
+```
