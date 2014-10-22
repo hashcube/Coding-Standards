@@ -30,6 +30,7 @@ var foo = function () {
 // good
 var foo = function() {
   var a = 1;
+
   function2();
   function3(a);
 }
@@ -94,6 +95,7 @@ animate()
 ```
 
 ## Naming Conventions
+* file names in smaller case with _ seperator
 * Variables in smaller case with words separated by _
 
 ```javascript
@@ -130,4 +132,55 @@ var b = new This_Is_An_Object();
 
 //good
 var a = new ThisIsAnObject();
+```
+
+## Spacing and Empty lines
+* Give necessary empty lines to make code more readable
+
+```javascript
+//bad
+/* global ButtonView */
+'use strict';
+var a = require('foo'),
+    b = 1;
+    c = function () {
+        return 2;
+    },
+    d = function () {
+        return 3
+    };
+a.operation();
+return b;
+
+//good
+/* global ButtonView */
+
+'use strict';
+
+var a = require('foo'),
+    b = 1,
+
+    c = function () {
+        return 2;
+    },
+
+    d = function () {
+        return 3
+    };
+
+a.operation();
+
+return b;
+```
+
+* break line on var chain if there will be a value assigned to it.
+```javascript
+//bad
+var a = foo(), b = bar(), c = 1, d, e;
+
+//good
+var a = foo(),
+    b = bar(),
+    c = 1,
+    d, e;
 ```
