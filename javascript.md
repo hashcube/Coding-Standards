@@ -47,6 +47,7 @@ var bar = 2;
 var foo = 1,
   bar = 2;
 ```
+
 ## Class
 * Define private variables and private functions on top, add an empty line after private properties.
 
