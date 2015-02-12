@@ -174,9 +174,11 @@ return b;
 ```
 
 * break line on var chain if there will be a value assigned to it.
+* group variables which have assignments
+
 ```javascript
 //bad
-var a = foo(), b = bar(), c = 1, d, e;
+var a = foo(), c = 1, d, b = bar(), e;
 
 //good
 var a = foo(),
