@@ -81,6 +81,7 @@ var foo = 1,
 ```
 
 ## Chaining
+* Chain variables into single `var`
 * Chain function calls on new lines
 
 ```javascript
