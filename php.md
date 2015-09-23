@@ -134,7 +134,7 @@ $variable_like_this = 0;
 ```
 ## Spacing and empty lines
 
-* Give necessary empty lines to make code more readble
+* Give necessary empty lines to make code more readable
 
 ```php
 <?php
