@@ -9,13 +9,14 @@
 * Don't use class name as constructor
 
 ```php
-// bad
+//Bad
 public function foo($a,$b) {
   function2();
     $a = 1;
     function3($a);
 }
-// good
+
+//Good
 public function foo($a, $b)
 {
   $a = 1;
@@ -24,19 +25,20 @@ public function foo($a, $b)
   function3($a);
 }
 
-//bad
+//Bad
 class Foo()
 {
-  //Constructor decleration
+  //Constructor declaration
   function Foo()
   {
     //Do stuffs
   }
 }
+
 //Good
 class Foo()
 {
-  //Constructor decleration
+  //Constructor declaration
   function __construct()
   {
     //Do stuff
@@ -50,6 +52,7 @@ class Foo()
 ```php
 //Bad
 $a='Foo';
+
 //Good
 $a = 'Foo';
 
@@ -58,6 +61,7 @@ $a = 'Foo';
 //Bad
 if($a > $b)
   //execute single line
+
 //Good
 if($a > $b)
 {
@@ -94,6 +98,7 @@ class class_name()
 {
   //Do stuffs
 }
+
 //Good
 class className()
 {
@@ -130,8 +135,10 @@ $variable_like_this = 0;
 ## Spacing and empty lines
 
 * Give necessary empty lines to make code more readble
+
 ```php
 <?php
+
 //Bad
 class Foo
 {
@@ -139,11 +146,13 @@ class Foo
   {
     $a = "bar";
   }
+
   private function printFoo()
   {
     $foo = "Foo";
     $foo = $this->updateFoo($foo);
   }
+
   private function updateFoo($foo)
   {
     $updated_foo = $foo . "bar";
@@ -165,9 +174,10 @@ class Foo
     //Variables
     $foo = "Foo";
 
-    /function calls
+    //function calls
     foo = $this->updateFoo($foo);
   }
+
   private function updateFoo($foo)
   {
     $updated_foo = $foo . "bar";
