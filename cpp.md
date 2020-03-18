@@ -25,22 +25,27 @@ class Person
 };
 ```
 
-**local variable name -**  use snake type. eg
+**local variable name -**  use snake case. eg
 ``` C++
 std::string first_name = “sameer”
 ```
 
-**local class variables -** should be camel case with first letter lower case, eg
+**member variable name -** use snake case with prefix m_. eg
+``` C++
+std::string m_first_name;
+```
+
+**local class variables -** should be camel case, eg
 ``` C++
 SampleClass sampleObj;
 ```
 
-**member class variables -** these are member class variables (objects), should be camel case with first letter lower case  and prefixed with m_.  public class variables should be named as local class variables
+**member class variables -** these are member class variables (objects), should be camel case and prefixed with m_.  public class variables should be named as local class variables
 ``` C++
 SampleClass *m_sampleObj;
 ```
 
-**function names -** use camelcase with first letter lower, eg:
+**function names -** use camel case, eg:
 ``` C++
 void doSomethingForMe ()
 {
@@ -48,15 +53,7 @@ void doSomethingForMe ()
 }
 ```
 
-**function params -** optionally, you can precede params with p_ when params in function scope named similar to params to avoid confusion. params follow same naming convention as local variables. 
-``` C++
-void doSomethingForMe (float p_img_height)
-{
-  img_height = static_cast<int>(p_img_height);
-}
-```
-
-**namespaces -** should be camel case:
+**namespaces -** should be camel case with first letter uppercase:
 ``` C++
 namespace CoreConfig 
 {
@@ -64,12 +61,12 @@ namespace CoreConfig
 }
 ```
 
-**constants -** identifiers should be all caps. eg:
+**constants -** identifiers should be all caps and words seperated with '_' . eg:
 ``` C++
 const int MIN_AGE = 18;
 ```
 
-**File Name -** In some places, file can contain multiple class with a main class and small supporting classes, unless these classed are being used by other classes as well, you can keep them in same file to prevent cluttering in file system. The name of the file will be same as the main class in same camel case.
+**File Name -** In some places, file can contain multiple class with a main class and small supporting classes, unless these classed are being used by other classes as well, you can keep them in same file to prevent cluttering in file system. The name of the file will be same as the main class in same camel case with first letter uppercase.
 
 **Includes -** CPP includes generally have .hpp extension while C uses .h extension. However, in our case, we will be using .h.
 please keep all the includes in .h files only! reason for that is to avoid duplicate include statements, though there will be include guards, that doesn’t look nice, and someone does not have to follow 2 different files to check includes. Also, .h files is where we declare class variables, so having includes there will help you.
